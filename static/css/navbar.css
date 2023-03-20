@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Oswald', sans-serif;
+}
+
+.navbar{
+    width: 100%;
+    height: 20vw;
+    overflow: hidden!important;
+}
+
+.logo-container{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    top: 1vw;
+    position: relative;
+}
+
+.logo{
+    width: 15vw;
+    z-index: 100;
+}
+
+.linea{
+    position: absolute;
+    width: 95%; 
+    top: 7vw;
+}
+
+.links-buttons-left{
+    display: flex;
+    position: absolute;
+    left: 5vw;
+}
+
+.links-buttons-left a{
+    display: inline-block;
+    width: 10px;
+    padding-right: 14vw;
+}
+
+.links-buttons-right{
+    display: flex;
+    position: absolute;
+    right: 0vw;
+}
+
+.links-buttons-right a{
+    display: inline-block;
+    margin-right: 14vw;
+}
+
+.links{
+
+    position: absolute;
+    color: black;
+    top: 2vw;
+    font-size: 25px;
+    z-index: 150;
+}
+
+.nav_label, .nav_input{
+    display: none;
+    position: absolute;
+}
+
+.search_label, .search_input{
+    display: none;
+    position: absolute;
+}
+
+.links_ul{
+    list-style: none;
+    display: flex;
+}
+
+.dropdown{
+    display: flex;
+}
+
+.dropdown-content{
+    position: absolute;
+    width: 122px;
+    height: 100px;
+    top: 74px;
+    z-index: 250;
+    background-color: rgb(231, 231, 231);
+    gap: 0.3vw;
+    flex-direction: column;
+    clip-path: polygon(0 0, 0 0, 100% 0, 100% 0);
+    transition: clip-path .3s ease-in-out;
+}
+
+.dropdown:hover .dropdown-content{
+    display: flex;
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+}
+
+.dropdown-ul{
+    list-style: none;
+}
+
+.dropdown-li{
+    height: 20px;
+    padding-top: 18px;
+}
+
+.dropdown-content a{
+    padding: 0;
+    height: 0px;
+    text-decoration: none;
+}
+
+.secondary-links{
+    display: block;
+    width: 7.4vw;
+    color: black;
+    text-decoration: none;
+    padding-left: 0.5vw;
+}
+
+
+@media (max-width:1160px){
+    .linea {
+        display: none;
+    }
+
+    .links{
+        position: relative;
+        font-size: 2.2vw;
+        display: block;
+        width: 15vw;
+    }
+
+    .links_buttons{
+        width: 25vw;
+        height: 40vw;
+        background-color: rgb(231, 231, 231);
+        position: absolute;
+        display: flex;
+        top: 2vw;
+        left: 5vw;
+        clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+        z-index: 500;
+        transition: clip-path .3s ease-in-out;
+    }
+
+    .nav_input:checked + .links_buttons{
+
+        clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+    }
+
+    .links_ul{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+    }
+
+    .links_li{
+        display: flex;
+        gap: 10vw;
+    }
+
+    .links-buttons-left{
+        top: 4vw;
+        left: 7px;
+    }
+
+    .links-buttons-left a{
+        display: block;
+        text-decoration: none;
+    }    
+
+    .links-buttons-right{
+        top: 23vw;
+        left: 7px;
+    }
+
+    .links-buttons-right a{
+        text-decoration: none;
+        display: block;
+    }
+
+    .navbar{
+        height: 30vw;
+    }
+
+    .logo{
+        width: 25vw;
+    }
+    .search_label{
+        display: block;
+        position: absolute;
+        right: 5vw;
+        top: 2vw;
+        z-index: 200;
+    }
+    .nav_label{
+        display: block;
+        position: absolute;
+        z-index: 550;
+        left: 5vw;
+        top: 2vw;
+        height: 45px;
+    }
+    .nav_img{
+        width: 5vw;
+    }
+    .search_img{
+        width: 5vw;
+    }
+
+    .dropdown-content{
+        top: 51px;
+        background-color: rgb(270, 270, 270);
+    }
+}
+
+@media (max-width:600px){
+    .navbar{
+        height: 50vw;
+    }
+
+    .logo{
+        width: 35vw;
+    }
+
+    .links_buttons{
+        transform: scale(1.2);
+        top: 7vw;
+        left: 8vw;
+        height: 51vw;
+    }
+
+    .links{
+        font-size: 3vw;
+    }
+
+    .links-buttons-left{
+        top: 6vw;
+    }
+
+    .links-buttons-right{
+        top: 29vw;
+    }
+
+    .nav_img{
+        width: 7vw;
+    }
+}
