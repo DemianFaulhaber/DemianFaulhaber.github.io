@@ -222,6 +222,7 @@ body{
     .dropdown-content{
         top: 51px;
         background-color: rgb(270, 270, 270);
+        z-index: 700;
     }
 }
 
